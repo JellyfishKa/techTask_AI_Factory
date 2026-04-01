@@ -1,0 +1,36 @@
+{
+  // Кастомный провайдер (OpenRouter — бесплатный тир с Qwen)
+  "models": {
+    "providers": {
+      "openrouter": {
+        "baseUrl": "https://openrouter.ai/api/v1",
+        "apiKey": "sk-or-YOUR_KEY_HERE"
+      }
+    }
+  },
+
+  // Настройка агента
+  "agents": {
+    "default": {
+      "model": "openrouter/qwen/qwen-2.5-72b-instruct",
+      "bootstrap": ["SOUL.md"]
+    }
+  },
+
+  // Gateway
+  "gateway": {
+    "port": 18789,
+    "host": "127.0.0.1"
+  },
+
+  // Telegram канал
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "botToken": "YOUR_TELEGRAM_BOT_TOKEN",
+      // "open" — любой может написать боту (удобно для проверки)
+      // "pairing" — нужно подтвердить pairing-код
+      "dmPolicy": "open"
+    }
+  }
+}
