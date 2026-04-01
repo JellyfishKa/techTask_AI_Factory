@@ -8,7 +8,7 @@
         }
       },
       "model": {
-        "primary": "openrouter/auto"
+        "primary": "openrouter/qwen/qwen-2.5-72b-instruct"
       },
       "memorySearch": {
         "enabled": false
@@ -22,7 +22,7 @@
       "token": "openclaw-docker-token"
     },
     "port": 18789,
-    "bind": "all",
+    "bind": "lan",
     "controlUi": {
       "allowInsecureAuth": true
     }
