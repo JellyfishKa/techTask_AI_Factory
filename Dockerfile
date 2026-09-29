@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # Установка OpenClaw глобально
-RUN npm install -g openclaw@latest
+RUN npm install -g openclaw@latest --fetch-retries=5 --fetch-retry-mintimeout=20000 --fetch-retry-maxtimeout=120000
 
 # Установка зависимостей Telegram-плагина внутри openclaw
 # (grammy и co. — peer deps, не устанавливаются автоматически через npm)
